@@ -2,9 +2,14 @@ import Image from "next/image"
 
 export default function Prizes() {
   const prizes = [
-    { id: 1, image: "/images/prize-1.png", alt: "First Prize" },
-    { id: 2, image: "/images/prize-2.png", alt: "Second Prize" },
-    { id: 3, image: "/images/prize-3.png", alt: "Third Prize" },
+    { id: 1, image: "/Prize2.png", alt: "Second Prize" },
+    { id: 2, image: "/Prize.png", alt: "First Prize" },
+    { id: 3, image: "/Prize3.png", alt: "Third Prize" },
+  ]
+  const prizes2 = [
+    { id: 1, image: "/cup2.png", alt: "Second Prize" },
+    { id: 2, image: "/cup1.png", alt: "First Prize" },
+    { id: 3, image: "/cup3.png", alt: "Third Prize" },
   ]
 
   return (
@@ -26,24 +31,38 @@ export default function Prizes() {
                           /></span>
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 justify-items-center">
           {prizes.map((prize) => (
             <div key={prize.id} className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <div className="  mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                <Image
+                  src={prize.image || "/placeholder.svg"}
+                  alt={prize.alt}
+                  width={228}
+                  height={228}
+                
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800">{prize.alt}</h3>
+            </div>
+          ))}
+        </div>
+        <div className="hidden md:grid md:grid-cols-3 gap-14 justify-items-center">
+          {prizes2.map((prize) => (
+            <div key={prize.id} className="text-center">
+              <div className="  mx-auto mb-4 flex items-center justify-center overflow-hidden">
                 <Image
                   src={prize.image || "/placeholder.svg"}
                   alt={prize.alt}
                   width={128}
                   height={128}
-                  className="w-full h-full object-cover"
+                
                 />
               </div>
+              
             </div>
           ))}
         </div>

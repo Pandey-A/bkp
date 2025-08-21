@@ -1,24 +1,30 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+import type { Metadata } from "next";
+import { productSans } from "../lib/fonts";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bappa Ka Prashad 3.0 - Google Developer Student Clubs",
-  description: "Join us for Bappa Ka Prashad 3.0, a celebration of technology and tradition.",
-    generator: 'v0.app'
-}
+  title: "BKP 5.0 - GDG RBU",
+  description: "Join us for Bappa Ka Prashad 5.0, a celebration of technology and tradition.",
+  icons: {
+    icon: "/gdgico.svg",
+    shortcut: "/gdgico.svg",
+    apple: "/gdgico.svg"
+  },
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={` ${productSans.variable} antialiased  bg-gradient-to-br from-orange-50 to-pink-50 font-sans`}
+      >
+        {children}
+      </body>
     </html>
-  )
+  );
 }

@@ -10,76 +10,91 @@ import { IoLocationOutline } from "react-icons/io5";
 
 export function Footer() {
   return (
-    <div className="footer mt-4 ">
+    <div className="footer mt-4">
       <footer
         id="footer"
-        className="relative flex w-full items-center justify-between py-10 max-md:flex-col md:h-80 overflow-hidden "
+        className="relative flex w-full items-center justify-between py-6 md:py-10 px-4 md:px-0 flex-col md:flex-row md:h-80 overflow-hidden "
       >
-        <div className="flex md:w-1/3 md:pl-16 flex-col items-center justify-center max-md:w-fit">
+        {/* Logo and Title Section */}
+        <div className="flex w-full md:w-1/3 md:pl-16 flex-col items-center justify-center mb-6 md:mb-0">
           <Image
             src="/gdgico.svg"
             alt="logo"
-            className="h-10"
-            width={80}
-            height={80}
+            className="h-8 md:h-10 mb-3 md:mb-0"
+            width={60}
+            height={60}
             priority
           />
-          <p className="pt-4 text-2xl text-black text-center max-md:text-xl">
+          <p className="pt-2 md:pt-4 text-lg md:text-2xl text-black text-center font-medium">
             Google Developer Groups
           </p>
-          <p>
-            <span className="text-md text-blue-600 max-md:text-lg">
-              On Campus{" "}
+          <div className="text-center mt-2">
+            <span className="text-sm md:text-md text-blue-600 font-medium">
+              On Campus
             </span>
-            <span className="text-md text-black max-md:text-lg">
-              {" "}
-              • Ramdeobaba University
+            <span className="text-sm md:text-md text-black">
+              {" "}• Ramdeobaba University
             </span>
-          </p>
+          </div>
         </div>
         
-        <div className="hidden md:block w-px h-48 bg-black rounded-lg dark:bg-gray-200"></div>
-        <div className="block md:hidden w-4/5 h-px bg-black rounded-lg dark:bg-gray-200 mt-6 mb-6"></div>
-        <div className="flex md:w-1/2 flex-col items-start justify-center gap-4 max-md:w-full max-md:px-4 max-md:py-8">
-          <div className="flex items-center">
-            <IoLocationOutline className="md:mx-12 mx-4 scale-150 text-black" />
-            <div className="text-md max-md:text-sm w-2/3 text-black">
-              Shri Ramdeobaba College of Engineering and Management, Ramdeo
-              Tekdi, Gittikhadan, Katol Road, Nagpur - 440013
+        {/* Divider */}
+        <div className="hidden md:block w-px h-48 bg-gray-300 dark:bg-gray-600"></div>
+        <div className="block md:hidden w-full max-w-xs h-px bg-gray-300 dark:bg-gray-600 my-6"></div>
+        
+        {/* Contact Information Section */}
+  <div className="flex w-full md:w-1/2 flex-col items-center md:items-start justify-center gap-4 md:gap-6 px-2 md:px-0">
+          {/* Address */}
+          <div className="flex flex-col items-center md:flex-row md:items-start w-full text-center md:text-left">
+            <IoLocationOutline className="mt-1 mb-2 md:mb-0 mr-0 md:mx-12 md:mr-6 text-lg md:text-xl text-black flex-shrink-0" />
+            <div className="text-sm md:text-md text-black leading-relaxed">
+              Shri Ramdeobaba College of Engineering and Management, Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur - 440013
             </div>
           </div>
-          <div className="items-center flex">
-            <EnvelopeClosedIcon className="md:ml-12 ml-4 mr-6 scale-150 text-black" />
+          
+          {/* Email */}
+          <div className="flex flex-col items-center md:flex-row md:items-center w-full text-center md:text-left">
+            <EnvelopeClosedIcon className="mb-2 md:mb-0 mr-0 md:ml-12 md:mr-6 text-lg md:text-xl text-black flex-shrink-0" />
             <a
               href="mailto:dsc.rknec@gmail.com"
-              className="underline-offset-2 underline text-md max-md:text-sm mx-6 text-left text-black"
+              className="underline-offset-2 underline text-sm md:text-md text-black hover:text-blue-600 transition-colors break-all"
             >
               dsc.rknec@gmail.com
             </a>
           </div>
-          <div className="flex items-center gap-8 py-8">
-            <div className="text-md md:ml-8 ml-4 text-black">Follow Us: </div>
-            <div className="flex gap-8">
+          
+          {/* Social Media */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 py-4 md:py-6 w-full justify-center">
+            <div className="text-sm md:text-md md:ml-8 text-black font-medium whitespace-nowrap text-center sm:text-left w-full sm:w-auto">
+              Follow Us:
+            </div>
+            <div className="flex gap-6 md:gap-8 justify-center w-full sm:w-auto">
               <a
                 href="https://www.instagram.com/gdg_rbu/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-2 rounded-full hover:bg-gray-100 transition-all duration-200"
+                aria-label="Follow us on Instagram"
               >
-                <InstagramLogoIcon className="scale-150 cursor-pointer text-black transition-all hover:scale-[1.8]" />
+                <InstagramLogoIcon className="w-5 h-5 md:w-6 md:h-6 text-black hover:text-pink-600 transition-colors" />
               </a>
               <a
                 href="https://mobile.twitter.com/gdsc_rcoem"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-2 rounded-full hover:bg-gray-100 transition-all duration-200"
+                aria-label="Follow us on Twitter"
               >
-                <TwitterLogoIcon className="scale-150 cursor-pointer text-black transition-all hover:scale-[1.8]" />
+                <TwitterLogoIcon className="w-5 h-5 md:w-6 md:h-6 text-black hover:text-blue-500 transition-colors" />
               </a>
               <a
                 href="https://in.linkedin.com/company/gdsc-rcoem"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-2 rounded-full hover:bg-gray-100 transition-all duration-200"
+                aria-label="Follow us on LinkedIn"
               >
-                <LinkedInLogoIcon className="scale-150 cursor-pointer text-black transition-all hover:scale-[1.8]" />
+                <LinkedInLogoIcon className="w-5 h-5 md:w-6 md:h-6 text-black hover:text-blue-700 transition-colors" />
               </a>
             </div>
           </div>

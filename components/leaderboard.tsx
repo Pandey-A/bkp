@@ -48,11 +48,17 @@ export default function Leaderboard() {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-pink-50">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-700 mb-8">Global Leaderboard 2022</h2>
-        </div>
+       <span className="flex justify-center mb-4 text-6xl font-bold text-gray-500 " style={{ fontFamily: 'Product Sans, sans-serif' }}>
+                    {/* <Image
+                      src="/Lead.svg"
+                      alt="Leaderboard Icon"
+                      width={700}
+                      height={700}
+                    /> */}
 
+                    GLOBAL LEADERBOARD 2024
+                  </span>
+      <div className="max-w-6xl mx-auto mt-10">
         <Image
           src="/Leaderboard.png"
           alt="Leaderboard Background"
@@ -60,7 +66,24 @@ export default function Leaderboard() {
           height={400}
           className="w-full h-auto"
         />
+        
       </div>
+
+       <div className="flex justify-center mt-6 sm:mt-8 px-4">
+        <a
+          href="https://unstop.com/o/kZSVs5q?lb=sDELTvhK&utm_medium=Share&utm_source=ashutpan9454&utm_campaign=Online_coding_challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-4 sm:px-8 sm:py-6 lg:px-12 lg:py-8 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 hover:shadow-xl transition-all duration-300 text-lg sm:text-xl lg:text-2xl font-bold transform hover:scale-105 active:scale-95"
+        >
+          <span className="flex items-center gap-2">
+            Visit Website
+            <span className="text-xl sm:text-2xl">→</span>
+          </span>
+        </a>
+      </div>
+
+      
     </section>
   )
 }

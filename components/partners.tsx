@@ -27,10 +27,8 @@ export default function Partners() {
                             height={450}
                           /></span>
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
+          <p className="text-xl text-gray-600 max-w-6xl mx-auto leading-relaxed">
+            We are grateful to our esteemed partners and collaborators whose constant support makes Bappa Ka Prashad 5.0 possible. Their contribution helps us bring together passionate coders, create a competitive yet fun learning environment, and celebrate the spirit of technology and innovation. With their partnership, we aim to inspire students, nurture talent, and build a stronger developer community.
           </p>
         </div>
 
@@ -41,9 +39,9 @@ export default function Partners() {
                 <Image
                   src={partner.image || "/placeholder.svg"}
                   alt={partner.alt}
-                  width={128}
-                  height={128}
-                  className="w-full h-full object-cover"
+                  width={400}
+                  height={400}
+                  
                 />
               </div>
             </div>

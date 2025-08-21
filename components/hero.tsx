@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
       {/* Main Container */}
       <div>
         {/* Header Text */}
-        <div className="flex flex-col lg:flex-row justify-between items-start mb-8 lg:mb-12 px-4 lg:px-12">
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-8 lg:mb-12 px-4 lg:px-12  mx-">
           <div className="flex-1 w-full lg:w-auto flex flex-col items-center lg:items-start">
             <Image
               src="/bkp5.svg"
