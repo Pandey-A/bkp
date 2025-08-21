@@ -4,7 +4,7 @@ import { productSans } from "../lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BKP 5.0 - GDG RBU",
+  title: "BKP 5.0 ",
   description: "Join us for Bappa Ka Prashad 5.0, a celebration of technology and tradition.",
   icons: {
     icon: "/gdgico.svg",
