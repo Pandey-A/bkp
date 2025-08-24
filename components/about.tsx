@@ -32,7 +32,7 @@ export default function About() {
               What is Bappa Ka Prashad?
             </h3>
             <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed mb-4  " style={{ fontFamily: 'Product Sans, sans-serif' }}>
-             
+              Bappa ka Prashad is an annual coding contest organised by GDG RBU aimed at spreading the greatest Prashad knowledge. It features 6 to 7 Ganesh Chaturthi-themed problems that challenge coders of all levels. The contest blends algorithmic challenges with a festive twist rooted in Indian culture. It celebrates the spirit of learning and the joy of coding during Ganesh Chaturthi.
             </p>
           </div>
 
